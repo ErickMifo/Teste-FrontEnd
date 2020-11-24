@@ -16,6 +16,7 @@
   margin-bottom: 30px;
 }
 .interests h3 {
+  align-self: center;
   margin-right: 10px;
   cursor: pointer;
   font-size: 1.25rem;
@@ -29,7 +30,6 @@
   color: white;
   background-color: rgb(83, 83, 158);
   border-radius: 10px;
-  font: inherit;
   border: none;
   cursor: pointer;
   outline: inherit;
@@ -41,7 +41,6 @@
 .buttonBackHome {
   color: rgb(83, 83, 158);
   background-color: white;
-  font: inherit;
   border: none;
   cursor: pointer;
   outline: inherit;
@@ -53,7 +52,7 @@
   color: rgb(219, 102, 102);
 }
 
-.politicsInterests:hover {
+.politicsInterestsActive {
   background-color: rgb(219, 102, 102);
   color: white;
 }
@@ -63,7 +62,7 @@
   color: rgb(117, 57, 117);
 }
 
-.businessInterests:hover {
+.businessInterestsActive {
   background-color: rgb(117, 57, 117);
   color: white;
 }
@@ -74,7 +73,7 @@
   color: rgb(63, 63, 182);
 }
 
-.techInterests:hover {
+.techInterestsActive {
   background-color: rgb(63, 63, 182);
   color: white;
 }
@@ -85,7 +84,7 @@
   color: rgb(90, 170, 90);
 }
 
-.scienceInterests:hover {
+.scienceInterestsActive {
   background-color: rgb(90, 170, 90);
   color: white;
 }
@@ -96,7 +95,13 @@
   color: rgb(214, 142, 7);
 }
 
-.sportsInterests:hover {
+.sportsInterestsActive {
   background-color: rgb(214, 142, 7);
   color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .interests {
+    flex-direction: column;
+  }
 }
