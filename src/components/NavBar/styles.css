@@ -54,7 +54,7 @@ a:focus {
   .menu-icon {
     display: block;
     margin-top: 1%;
-    margin-right: 3%;
+    margin-right: 6%;
     font-size: 40px;
     color: black;
     cursor: pointer;
@@ -64,12 +64,11 @@ a:focus {
     position: absolute;
     right: 0px;
     height: 92vh;
-    top: 10vh;
+    top: 9vh;
     background-color: #ffff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     transform: translateX(100%);
     transition: all 0.5s ease-in;
@@ -81,7 +80,7 @@ a:focus {
     position: absolute;
     right: 0px;
     height: 92vh;
-    top: 10vh;
+    top: 9vh;
     background-color: #ffff;
     display: flex;
     flex-direction: column;
@@ -92,7 +91,6 @@ a:focus {
     z-index: 1;
   }
   .loginNav {
-    margin-top: 100px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
