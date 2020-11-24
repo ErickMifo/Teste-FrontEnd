@@ -24,7 +24,7 @@ function Home() {
       <NavBar />   
 
       {data.map((item) => 
-          <ul key={item.tags[0].id} >
+          <ul key={item.title} >
             <li >{item.title}</li>
           </ul>
         )}

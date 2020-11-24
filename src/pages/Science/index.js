@@ -27,7 +27,7 @@ function Science() {
             <NavBar />   
 
 {data.map((item) => 
-    <ul key={item.tags[0].id} >
+    <ul key={item.title} >
    {item.tags[0].label === 'Science' ? <li>{item.title}</li> : null}  
     </ul>
   )}
