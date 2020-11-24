@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../assets/logo.png';
 import './styles.css';
 import { Link } from 'react-router-dom';
+import DehazeIcon from '@material-ui/icons/Dehaze';
+import ClearIcon from "@material-ui/icons/Clear";
 
 function NavBar() {
+
+    const [click, setClick] = useState(false)
+
+    const handleClick = () => {
+setClick(!click)
+    }
+
+
     return (
         <div className="navBar-container">
 
@@ -15,7 +25,7 @@ function NavBar() {
             />
             </Link>
             <div
-            className="navLinks">
+            className={click ? "navActive" : "navLinks"}>
                 <Link to='/politics'>
             <h3 className="NavTopics">    POLITICS    </h3>
                 </Link>
@@ -36,6 +46,11 @@ function NavBar() {
                 </Link>
             </div>
                 
+            <div className="menu-icon" onClick={handleClick}>
+
+                {click ? <ClearIcon /> : <DehazeIcon />}
+
+            </div>  
         </div>
     )
 };
