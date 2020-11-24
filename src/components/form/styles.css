@@ -31,3 +31,6 @@ input {
   background-color: grey;
   opacity: 0.5;
 }
+.formButton:hover {
+  opacity: 0.9;
+}
