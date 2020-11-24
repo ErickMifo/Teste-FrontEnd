@@ -6,6 +6,7 @@ import './styles.css'
 function Form() {
 
   const [name, setName] = useState('');
+  const [password, setPassword] = useState('')
 
   return (
 
@@ -13,15 +14,24 @@ function Form() {
 
         <div className="FormInputs">
           <h2>USERNAME</h2>
-          <input type="text" onChange={(event) => setName(event.target.value)} />
+          <input 
+          type="text"
+          onChange={(event) => setName(event.target.value)} />
 
-            <h2>PASSWORD</h2>
-            <input type="text" />
+          <h2>PASSWORD</h2>
+          <input 
+          type="text"
+          onChange={(event) => setPassword(event.target.value)} />
 
         </div>
 
         <Link to={`/welcome?name=${name}`}>
-          <button className="formButton" type="submit">Login</button>
+          <button 
+          className="formButton"
+          disabled = {name === '' || password === '' ?  true : false }
+          type="submit">
+            Login
+          </button>
         </Link>
 </form>   
   );
