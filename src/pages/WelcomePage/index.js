@@ -3,6 +3,7 @@ import './styles.css';
 import queryString from 'query-string';
 import NavBar from '../../components/NavBar';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function WelcomePage({ location }) {
 
@@ -46,23 +47,69 @@ function WelcomePage({ location }) {
 return (
     <>
         <NavBar />
-        <div className="WelcomeContainer">
-               <h1>Welcome, <span style={{color: "#1167b1"}}>{name}</span>!</h1>
+      <div className="WelcomeContainer">
+
+
+
+               <motion.h1 exit={{ opacity: 0}} transition={{duration: 0.2}} className="welcomeTitle">Welcome, <span style={{color: "#1167b1"}}>{name}</span>!</motion.h1>
             <div className="interestsContainer">
-               <p className="interestsTitle">MY INTERESTS</p>
+               <motion.p exit={{ opacity: 0}} transition={{duration: 0.2}} className="interestsTitle">MY INTERESTS</motion.p>
+
                 <div className="interests">
-                    <h3 onClick={handleClickPolitics} className={politics ? "politicsInterestsActive" : "politicsInterests"}>POLITICS</h3>
-                    <h3 onClick={handleClickBusiness} className={business ? "businessInterestsActive" : "businessInterests"}>BUSINESS</h3>
-                    <h3 onClick={handleClickTech} className={tech ? "techInterestsActive" : "techInterests"}>TECH</h3>
-                    <h3 onClick={handleClickScience} className={science ? "scienceInterestsActive" : "scienceInterests"}>SCIENCE</h3>
-                    <h3 onClick={handleClickSports} className={sports ? "sportsInterestsActive" : "sportsInterests"}>SPORTS</h3>
+                    <motion.h3
+                    exit={{y: 300, opacity: 0}}
+                    transition={{duration: 0.6}}
+                    onClick={handleClickPolitics}
+                    className={politics ? "politicsInterestsActive" : "politicsInterests"}>
+                      POLITICS
+                    </motion.h3>
+                    <motion.h3
+                    exit={{y:-300, opacity: 0}}
+                    transition={{duration: 0.6}}
+                    onClick={handleClickBusiness} 
+                    className={business ? "businessInterestsActive" : "businessInterests"}>
+                      BUSINESS
+                    </motion.h3>
+                    <motion.h3
+                    exit={{y:300, opacity: 0}}
+                    transition={{duration: 0.6}}
+                    onClick={handleClickTech}
+                    className={tech ? "techInterestsActive" : "techInterests"}>
+                      TECH
+                    </motion.h3>
+                    <motion.h3
+                     exit={{y:-300, opacity: 0}}
+                     transition={{duration: 0.6}}
+                    onClick={handleClickScience} 
+                    className={science ? "scienceInterestsActive" : "scienceInterests"}>
+                      SCIENCE
+                    </motion.h3>
+                    <motion.h3
+                     exit={{y:300, opacity: 0}}
+                     transition={{duration: 0.6}}
+                    onClick={handleClickSports} 
+                    className={sports ? "sportsInterestsActive" : "sportsInterests"}>
+                      SPORTS
+                    </motion.h3>
                 </div>
             </div>
+
+
+            <motion.div         
+              className="welcomeButtons"
+              exit={{ opacity: 0}}
+              transition={{duration: 0.2}}>
+
             <button className="buttonSave"> SAVE </button>
+
             <Link to='/'>
             <button className="buttonBackHome"> BACK TO HOME </button>
             </Link>
-        </div>
+
+            </motion.div>
+
+
+       </div>
     </>
     )
 }

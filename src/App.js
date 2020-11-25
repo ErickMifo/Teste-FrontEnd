@@ -9,6 +9,7 @@ import Science from './pages/Science';
 import Sports from './pages/Sports';
 import Login from './pages/Login';
 import WelcomePage from './pages/WelcomePage';
+import { AnimatePresence } from 'framer-motion';
 
 
 
@@ -17,8 +18,10 @@ function App() {
   return (
     <div className="App">
 <Router>  
-
-    <Switch>
+<Route
+        render={({ location }) => (
+    <AnimatePresence initial={false} exitBeforeEnter>
+    <Switch location={location} key={location.pathname}>
 
       <Route  exact path="/" component={Home} />
 
@@ -37,7 +40,9 @@ function App() {
       <Route  path="/welcome" component={WelcomePage} />
       
     </Switch>
-
+    </AnimatePresence>
+      )}
+      />
 </Router>
   </div>
   );

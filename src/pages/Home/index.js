@@ -54,7 +54,10 @@ function Home() {
   return (
 <>
     <NavBar />   
-    <div className="home">
+    <motion.div   
+    exit={{y: 300, opacity: 0 }}
+    transition={{duration: 0.6}}  
+    className="home">
 
 <div className="mainNews">
 
@@ -126,7 +129,7 @@ function Home() {
         author={data5.authors}
         content={data5.content}/>
 </motion.div>
-    </div>
+    </motion.div>
 </>
   );
 }

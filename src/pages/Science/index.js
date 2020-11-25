@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavBar from '../../components/NavBar';
 import instance from '../../fetch/axios';
 import '../../styles/topicsStyles.css';
-
+import { motion } from 'framer-motion';
 
 
 function Science() {
@@ -25,7 +25,10 @@ function Science() {
             <NavBar />   
 
 {data.map((item) => 
-    <div className='topicsList' key={item.title} >
+    <motion.div
+    exit={{opacity: 0}}
+    transition={{duration: 0.4}}
+    className='topicsList' key={item.title} >
    {item.tags[0].label === 'Science' ?
         <div>
     <img className="imageTopics" src={item.image_url} alt='science' />
@@ -36,7 +39,7 @@ function Science() {
     <p>{item.authors}</p>
         </div>
    : null}  
-    </div>
+    </motion.div>
   )}
 
         </div>
