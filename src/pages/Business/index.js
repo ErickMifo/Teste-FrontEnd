@@ -1,24 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import NavBar from '../../components/NavBar';
-import axios from 'axios';
-
-const instance = axios.create ({
-    baseURL: "https://blog.cheesecakelabs.com/challenge/"
-});
+import '../../styles/topicsStyles.css';
 
 
 function Business() {
 
-    
-    const [data, setData] = useState([])
 
-    useEffect(() => {
-        async function getData() {
-            const request = await instance.get('')
-            setData(request.data)
-        }
-        getData()
-      }, [])
 
 
     return (
@@ -26,11 +13,7 @@ function Business() {
             
             <NavBar />   
 
-{data.map((item) => 
-    <ul key={item.title} >
-   {item.tags[0].label === 'Business' ? <li>{item.title}</li> : null}  
-    </ul>
-  )}
+            <h1 className='topicsList'>There is still no articles with the topic "Business"</h1> 
 
         </div>
     )

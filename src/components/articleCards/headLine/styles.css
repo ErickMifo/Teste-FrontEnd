@@ -2,3 +2,9 @@
   width: 250px;
   height: auto;
 }
+
+@media screen and (max-width: 1120px) {
+  .imgHeadLine {
+    width: 100px;
+  }
+}

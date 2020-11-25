@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from '../../components/NavBar';
-import axios from 'axios';
+import instance from '../../fetch/axios';
+import '../../styles/topicsStyles.css';
 
-const instance = axios.create ({
-    baseURL: "https://blog.cheesecakelabs.com/challenge/"
-});
 
 
 function Tech() {
@@ -27,9 +25,18 @@ function Tech() {
             <NavBar />   
 
 {data.map((item) => 
-    <ul key={item.title} >
-   {item.tags[0].label === 'Tech' ? <li>{item.title}</li> : null}  
-    </ul>
+    <div className='topicsList' key={item.title} >
+   {item.tags[0].label === 'Tech' ?
+        <div>
+    <img className="imageTopics" src={item.image_url} alt='Tech' />
+    <h1>{item.title}</h1> 
+    <p>{item.content}</p>
+    <p>@ {item.website}</p>
+    <p>{item.date}</p>
+    <p>{item.authors}</p>
+        </div>
+   : null}  
+    </div>
   )}
 
         </div>

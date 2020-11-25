@@ -5,3 +5,9 @@
 .authorFeatured {
   margin-top: 60px;
 }
+
+@media screen and (max-width: 550px) {
+  .imgFeatured {
+    width: 300px;
+  }
+}
