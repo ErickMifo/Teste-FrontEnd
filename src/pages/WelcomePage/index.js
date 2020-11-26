@@ -15,6 +15,9 @@ function WelcomePage({ location }) {
     const [sports, setSports] = useState(false);
 
 
+
+    //Getting the name from URL and setting the state
+
     useEffect(() => {
 
         const { name } = queryString.parse(location.search);
@@ -23,24 +26,29 @@ function WelcomePage({ location }) {
        
       }, [location.search]);
 
+
+
+      //FIX find a shorter way to write these fucntions 
+      //( i thought about a bunch of if's inside a single function, but i think it would be confusing)
+      
       const handleClickPolitics = (e) => {
         console.log(e.target.className)
         setPolitics(!politics)
       }
       const handleClickBusiness = (e) => {
-        console.log(e.target.className)
+
         setBusiness(!business)
       }
       const handleClickTech = (e) => {
-        console.log(e.target.className)
+
         setTech(!tech)
       }
       const handleClickScience = (e) => {
-        console.log(e.target.className)
+
         setScience(!science)
       }
       const handleClickSports = (e) => {
-        console.log(e.target.className)
+
         setSports(!sports)
       }
       

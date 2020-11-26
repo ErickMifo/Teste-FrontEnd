@@ -29,6 +29,9 @@ function Home() {
     }, [animation, newsView])
 
 
+
+    //FIX find a shorter way to write these consts 
+
     const [data0, setData0] = useState('')
     const [data1, setData1] = useState('')
     const [data2, setData2] = useState('')
