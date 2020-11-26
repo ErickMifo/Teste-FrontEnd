@@ -18,7 +18,7 @@ function Home() {
     const [newsRef, newsView] = useInView({
 
       triggerOnce: true,
-      rootMargin: '-200px'
+      rootMargin: '-100px'
   
     })
 
