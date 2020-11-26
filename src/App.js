@@ -8,6 +8,7 @@ import Tech from './pages/Tech';
 import Science from './pages/Science';
 import Sports from './pages/Sports';
 import Login from './pages/Login';
+import Page404 from './pages/page404';
 import WelcomePage from './pages/WelcomePage';
 import { AnimatePresence } from 'framer-motion';
 
@@ -38,6 +39,8 @@ function App() {
       <Route  exact path="/login" component={Login} />
 
       <Route  path="/welcome" component={WelcomePage} />
+
+      <Route component={Page404} />
       
     </Switch>
     </AnimatePresence>

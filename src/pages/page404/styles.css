@@ -1,0 +1,7 @@
+.container404 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(0deg, #ebd6b7, white);
+  height: 84.35vh;
+}
