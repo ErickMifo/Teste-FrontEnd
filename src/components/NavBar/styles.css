@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgb(73, 69, 69);
-  background-image: linear-gradient(0deg, #fffcf2, #ccc5b9);
+  background-image: linear-gradient(0deg, #ffffff, #f0dfc5);
   margin-bottom: 40px;
 }
 
@@ -24,13 +24,13 @@
 }
 
 .navLinks h3:hover {
-  color: #eb5e28;
+  color: #63d2d2;
 }
 
 .loginNav {
   margin-right: 20px;
   margin-left: 30px;
-  color: blue;
+  color: #7a63d2;
 }
 
 a,
