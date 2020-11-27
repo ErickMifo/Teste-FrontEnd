@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './pages/Home';
 import Politics from './pages/Politics'
-import "./app.css";
+import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Business from './pages/Business';
 import Tech from './pages/Tech';
